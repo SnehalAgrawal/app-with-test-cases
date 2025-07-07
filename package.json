@@ -1,0 +1,37 @@
+{
+  "name": "be-app-wth-test-cases",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "cross-env NODE_ENV=test USE_IN_MEMORY_DB=false mocha --timeout 10000 --exit",
+    "test-ci": "cross-env NODE_ENV=test USE_IN_MEMORY_DB=true mocha --timeout 10000 --exit",
+    "lint": "eslint . --format json --output-file eslint-report.json",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "chai-http": "^5.1.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "mocha": "^11.7.1",
+    "mongodb-memory-server": "^10.1.4",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
+  }
+}
